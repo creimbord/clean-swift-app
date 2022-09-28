@@ -10,7 +10,6 @@
 		CCA4303628E48DC100E91BD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4303528E48DC100E91BD0 /* AppDelegate.swift */; };
 		CCA4303828E48DC100E91BD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4303728E48DC100E91BD0 /* SceneDelegate.swift */; };
 		CCA4303A28E48DC100E91BD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4303928E48DC100E91BD0 /* ViewController.swift */; };
-		CCA4303D28E48DC100E91BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA4303B28E48DC100E91BD0 /* Main.storyboard */; };
 		CCA4303F28E48DC100E91BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA4303E28E48DC100E91BD0 /* Assets.xcassets */; };
 		CCA4304228E48DC100E91BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA4304028E48DC100E91BD0 /* LaunchScreen.storyboard */; };
 		CCA4304D28E48DC200E91BD0 /* CleanSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4304C28E48DC200E91BD0 /* CleanSwiftAppTests.swift */; };
@@ -39,7 +38,6 @@
 		CCA4303528E48DC100E91BD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCA4303728E48DC100E91BD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CCA4303928E48DC100E91BD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCA4303C28E48DC100E91BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCA4303E28E48DC100E91BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCA4304128E48DC100E91BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCA4304328E48DC100E91BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,10 +100,7 @@
 				CCA4303528E48DC100E91BD0 /* AppDelegate.swift */,
 				CCA4303728E48DC100E91BD0 /* SceneDelegate.swift */,
 				CCA4303928E48DC100E91BD0 /* ViewController.swift */,
-				CCA4303B28E48DC100E91BD0 /* Main.storyboard */,
-				CCA4303E28E48DC100E91BD0 /* Assets.xcassets */,
-				CCA4304028E48DC100E91BD0 /* LaunchScreen.storyboard */,
-				CCA4304328E48DC100E91BD0 /* Info.plist */,
+				CCA4307428E48F0700E91BD0 /* Resources */,
 			);
 			path = CleanSwiftApp;
 			sourceTree = "<group>";
@@ -126,6 +121,16 @@
 				CCA4305928E48DC200E91BD0 /* Info.plist */,
 			);
 			path = CleanSwiftAppUITests;
+			sourceTree = "<group>";
+		};
+		CCA4307428E48F0700E91BD0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCA4303E28E48DC100E91BD0 /* Assets.xcassets */,
+				CCA4304028E48DC100E91BD0 /* LaunchScreen.storyboard */,
+				CCA4304328E48DC100E91BD0 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +238,6 @@
 			files = (
 				CCA4304228E48DC100E91BD0 /* LaunchScreen.storyboard in Resources */,
 				CCA4303F28E48DC100E91BD0 /* Assets.xcassets in Resources */,
-				CCA4303D28E48DC100E91BD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +300,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CCA4303B28E48DC100E91BD0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCA4303C28E48DC100E91BD0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCA4304028E48DC100E91BD0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,7 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CleanSwiftApp/Info.plist;
+				INFOPLIST_FILE = CleanSwiftApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CleanSwiftApp/Info.plist;
+				INFOPLIST_FILE = CleanSwiftApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
