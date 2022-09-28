@@ -40,7 +40,6 @@ final class EmojiView: UIControl {
     // MARK: - Views
     let label: UILabel = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = Color.gray
         return label
     }()
@@ -57,6 +56,12 @@ final class EmojiView: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Life cycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupFrames()
+    }
+    
 }
 
 // MARK: - Setup views
@@ -64,7 +69,6 @@ private extension EmojiView {
     func setupViews() {
         addSubviews()
         setupView()
-        setupConstraints()
     }
     
     func addSubviews() {
@@ -76,10 +80,8 @@ private extension EmojiView {
         layer.cornerRadius = style.cornerRadius
     }
     
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+    func setupFrames() {
+        label.frame = CGRect(origin: .zero, size: label.intrinsicContentSize)
+        label.center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
     }
 }

@@ -23,6 +23,20 @@ final class MainRouter: MainRoutingLogic, MainDataPassing {
     
     // MARK: - MainRoutingLogic
     func routeToPath() {
-        print("routing to path...")
+        let pathViewController = Assembly.createPathScene()
+        if var pathDataStore = pathViewController.router.dataStore {
+            passDataToPath(destination: &pathDataStore)
+            navigateToPath(destination: pathViewController)
+        }
+    }
+    
+    // MARK: - Navigation
+    private func navigateToPath(destination: PathViewController) {
+        viewController?.present(destination, animated: true)
+    }
+    
+    // MARK: - Passing data
+    private func passDataToPath(destination: inout PathDataStore) {
+        destination.selectedIndex = dataStore?.selectedIndex
     }
 }

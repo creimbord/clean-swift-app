@@ -23,4 +23,20 @@ enum Assembly {
         
         return viewController
     }
+    
+    static func createPathScene() -> PathViewController {
+        let router = PathRouter()
+        let presenter = PathPresenter()
+        let interactor = PathInteractor()
+        let viewController = PathViewController()
+        
+        interactor.presenter = presenter
+        router.dataStore = interactor
+        router.viewController = viewController
+        presenter.viewController = viewController
+        viewController.router = router
+        viewController.interactor = interactor
+        
+        return viewController
+    }
 }

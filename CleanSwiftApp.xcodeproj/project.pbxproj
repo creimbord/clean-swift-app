@@ -21,6 +21,12 @@
 		CCA430A128E4920900E91BD0 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430A028E4920900E91BD0 /* EmojiView.swift */; };
 		CCA430AA28E492AA00E91BD0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430A928E492AA00E91BD0 /* Color.swift */; };
 		CCA430B928E4957C00E91BD0 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430B828E4957C00E91BD0 /* Assembly.swift */; };
+		CCA430C428E4AE5000E91BD0 /* PathModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430C328E4AE5000E91BD0 /* PathModel.swift */; };
+		CCA430C928E4AF5100E91BD0 /* PathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430C828E4AF5100E91BD0 /* PathViewController.swift */; };
+		CCA430CE28E4AF9A00E91BD0 /* PathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430CD28E4AF9A00E91BD0 /* PathCell.swift */; };
+		CCA430D328E4AFB900E91BD0 /* PathRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430D228E4AFB900E91BD0 /* PathRouter.swift */; };
+		CCA430DB28E4AFFB00E91BD0 /* PathInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430DA28E4AFFB00E91BD0 /* PathInteractor.swift */; };
+		CCA430E028E4B01E00E91BD0 /* PathPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA430DF28E4B01E00E91BD0 /* PathPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		CCA430A028E4920900E91BD0 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		CCA430A928E492AA00E91BD0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CCA430B828E4957C00E91BD0 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		CCA430C328E4AE5000E91BD0 /* PathModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathModel.swift; sourceTree = "<group>"; };
+		CCA430C828E4AF5100E91BD0 /* PathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathViewController.swift; sourceTree = "<group>"; };
+		CCA430CD28E4AF9A00E91BD0 /* PathCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCell.swift; sourceTree = "<group>"; };
+		CCA430D228E4AFB900E91BD0 /* PathRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRouter.swift; sourceTree = "<group>"; };
+		CCA430DA28E4AFFB00E91BD0 /* PathInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathInteractor.swift; sourceTree = "<group>"; };
+		CCA430DF28E4B01E00E91BD0 /* PathPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				CCA4307C28E4908700E91BD0 /* MainScene */,
+				CCA430BD28E4ADFF00E91BD0 /* PathScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -161,9 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				CCA4307D28E4909300E91BD0 /* Model */,
+				CCA4308028E490A800E91BD0 /* Router */,
 				CCA4307E28E4909700E91BD0 /* Interactor */,
 				CCA4307F28E4909C00E91BD0 /* Presenter */,
-				CCA4308028E490A800E91BD0 /* Router */,
 				CCA4308128E490DA00E91BD0 /* ViewController */,
 			);
 			path = MainScene;
@@ -240,6 +253,59 @@
 				CCA430B828E4957C00E91BD0 /* Assembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CCA430BD28E4ADFF00E91BD0 /* PathScene */ = {
+			isa = PBXGroup;
+			children = (
+				CCA430C228E4AE3500E91BD0 /* Model */,
+				CCA430C128E4AE2F00E91BD0 /* Router */,
+				CCA430C028E4AE2B00E91BD0 /* Interactor */,
+				CCA430BF28E4AE1F00E91BD0 /* Presenter */,
+				CCA430BE28E4AE0E00E91BD0 /* ViewController */,
+			);
+			path = PathScene;
+			sourceTree = "<group>";
+		};
+		CCA430BE28E4AE0E00E91BD0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CCA430CD28E4AF9A00E91BD0 /* PathCell.swift */,
+				CCA430C828E4AF5100E91BD0 /* PathViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CCA430BF28E4AE1F00E91BD0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCA430DF28E4B01E00E91BD0 /* PathPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CCA430C028E4AE2B00E91BD0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CCA430DA28E4AFFB00E91BD0 /* PathInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CCA430C128E4AE2F00E91BD0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CCA430D228E4AFB900E91BD0 /* PathRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CCA430C228E4AE3500E91BD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCA430C328E4AE5000E91BD0 /* PathModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,13 +440,19 @@
 				CCA4308B28E4915B00E91BD0 /* MainModel.swift in Sources */,
 				CCA430B928E4957C00E91BD0 /* Assembly.swift in Sources */,
 				CCA430A128E4920900E91BD0 /* EmojiView.swift in Sources */,
+				CCA430E028E4B01E00E91BD0 /* PathPresenter.swift in Sources */,
 				CCA4309A28E491D100E91BD0 /* MainRouter.swift in Sources */,
 				CCA4309528E4919400E91BD0 /* MainPresenter.swift in Sources */,
 				CCA4308328E490F000E91BD0 /* MainViewController.swift in Sources */,
+				CCA430CE28E4AF9A00E91BD0 /* PathCell.swift in Sources */,
 				CCA4303628E48DC100E91BD0 /* AppDelegate.swift in Sources */,
+				CCA430DB28E4AFFB00E91BD0 /* PathInteractor.swift in Sources */,
 				CCA4309028E4917800E91BD0 /* MainInteractor.swift in Sources */,
+				CCA430C428E4AE5000E91BD0 /* PathModel.swift in Sources */,
 				CCA4303828E48DC100E91BD0 /* SceneDelegate.swift in Sources */,
+				CCA430D328E4AFB900E91BD0 /* PathRouter.swift in Sources */,
 				CCA430AA28E492AA00E91BD0 /* Color.swift in Sources */,
+				CCA430C928E4AF5100E91BD0 /* PathViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
